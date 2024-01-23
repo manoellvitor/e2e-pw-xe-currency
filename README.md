@@ -16,6 +16,7 @@ Repository of Playwright Automation Technical Assessment
 
 ```
  In order to see the GitHub Actions running I recomend forking the project first.
+ Then clone it from your github forked link.
 ```
 
 1. Clone the GitHub Repo and install dependencies
