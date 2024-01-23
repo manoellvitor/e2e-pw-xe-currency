@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "allure-report": "npx allure serve allure-results"
+    "allure-report": "npx allure serve allure-results",
+    "test": "npx playwright test"
   },
   "keywords": [],
   "author": "",

@@ -121,7 +121,7 @@ test.describe("Currencies Convertions", async () => {
     const currency = data.AUDtoCAD as CurrencyModel;
 
     await currencyPage.go();
-    await currencyPage.acceptCookies();
+    // await currencyPage.acceptCookies();
     await currencyPage.fillAmount(currency.amount);
     await currencyPage.fillFromCurrency(currency.from);
     await currencyPage.fillToCurrency(currency.to);
