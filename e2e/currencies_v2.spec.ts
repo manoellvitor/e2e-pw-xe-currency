@@ -1,4 +1,5 @@
 import { CurrencyPage } from "./support/pages/currencies";
+import { allure } from "allure-playwright";
 import fs from "fs";
 import { parse } from "csv-parse/sync";
 import path from "path";
@@ -22,6 +23,11 @@ test.describe("Currencies Convertions", () => {
   for (const currency of conversions) {
     // Scenario: Verify Currency conversion
     test(`Verify ${currency.from} to ${currency.to} conversion`, async () => {
+      // Allure meta-data configurations
+      await allure.epic("Web Application");
+      await allure.feature("Essential features");
+      await allure.story("Currency Convertion");
+
       // Given the user is on the currency converter page
       await currencyPage.go();
       await currencyPage.acceptCookies();
