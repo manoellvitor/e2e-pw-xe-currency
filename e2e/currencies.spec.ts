@@ -89,4 +89,21 @@ test.describe("Currencies Convertions", async () => {
     await currencyPage.currencyConvert();
     await currencyPage.validateConversionAmount(currency.toName);
   });
+
+  test("Verify CHF to CNY conversion", async () => {
+    // Scenario: Verify CHF to CNY conversion
+    // Given the user is on the currency converter page
+    // When the user selects Swiss Franc as the source currency and Chinese Yuan as the target currency
+    // And the user performs the currency conversion
+    // Then the result on the proceeding page should be accurate
+    const currency = data.AUDtoCAD as CurrencyModel;
+
+    await currencyPage.go();
+    await currencyPage.acceptCookies();
+    await currencyPage.fillAmount(currency.amount);
+    await currencyPage.fillFromCurrency(currency.from);
+    await currencyPage.fillToCurrency(currency.to);
+    await currencyPage.currencyConvert();
+    await currencyPage.validateConversionAmount(currency.toName);
+  });
 });

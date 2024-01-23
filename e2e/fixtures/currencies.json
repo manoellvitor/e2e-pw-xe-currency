@@ -13,6 +13,13 @@
     "to": "JPY",
     "amount": "20"
   },
+  "CHFtoCNY": {
+    "fromName": "Swiss Francs",
+    "from": "CHF",
+    "toName": "Chinese Yuan Renminbi",
+    "to": "CNY",
+    "amount": "78"
+  },
   "AUDtoCAD": {
     "fromName": "Australian Dollars",
     "from": "AUD",
