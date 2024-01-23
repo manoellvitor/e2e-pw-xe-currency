@@ -8,7 +8,7 @@
   },
   "USDtoJPY": {
     "fromName": "US Dollars",
-    "from": "EUR",
+    "from": "USD",
     "toName": "Japanese Yen",
     "to": "JPY",
     "amount": "20"
