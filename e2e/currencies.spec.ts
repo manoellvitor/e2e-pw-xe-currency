@@ -96,6 +96,23 @@ test.describe("Currencies Convertions", async () => {
     // When the user selects Swiss Franc as the source currency and Chinese Yuan as the target currency
     // And the user performs the currency conversion
     // Then the result on the proceeding page should be accurate
+    const currency = data.CHFtoCNY as CurrencyModel;
+
+    await currencyPage.go();
+    await currencyPage.acceptCookies();
+    await currencyPage.fillAmount(currency.amount);
+    await currencyPage.fillFromCurrency(currency.from);
+    await currencyPage.fillToCurrency(currency.to);
+    await currencyPage.currencyConvert();
+    await currencyPage.validateConversionAmount(currency.toName);
+  });
+
+  test("Verify INR to SGD conversion", async () => {
+    // Scenario: Verify INR to SGD conversion
+    // Given the user is on the currency converter page
+    // When the user selects Indian Rupee as the source currency and Singapore Dollar as the target currency
+    // And the user performs the currency conversion
+    // Then the result on the proceeding page should be accurate
     const currency = data.AUDtoCAD as CurrencyModel;
 
     await currencyPage.go();

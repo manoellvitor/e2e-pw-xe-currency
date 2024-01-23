@@ -13,6 +13,13 @@
     "to": "JPY",
     "amount": "20"
   },
+  "INRtoSGD": {
+    "fromName": "Indian Rupees",
+    "from": "INR",
+    "toName": "Singapore Dollars",
+    "to": "SGD",
+    "amount": "200"
+  },
   "CHFtoCNY": {
     "fromName": "Swiss Francs",
     "from": "CHF",
