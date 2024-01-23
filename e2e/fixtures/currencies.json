@@ -13,6 +13,13 @@
     "to": "JPY",
     "amount": "20"
   },
+  "AUDtoCAD": {
+    "fromName": "Australian Dollars",
+    "from": "AUD",
+    "toName": "Canadian Dollars",
+    "to": "CAD",
+    "amount": "14"
+  },
   "negativeAmount": {
     "fromName": "",
     "from": "",
