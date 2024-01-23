@@ -1,0 +1,23 @@
+{
+  "USDtoGBP": {
+    "fromName": "Euros",
+    "from": "EUR",
+    "toName": "British Pounds",
+    "to": "GBP",
+    "amount": "5"
+  },
+  "negativeAmount": {
+    "fromName": "",
+    "from": "",
+    "toName": "",
+    "to": "",
+    "amount": "0"
+  },
+  "invalidAmount": {
+    "fromName": "",
+    "from": "",
+    "toName": "",
+    "to": "",
+    "amount": "abC-1"
+  }
+}

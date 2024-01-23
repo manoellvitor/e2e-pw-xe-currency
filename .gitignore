@@ -1,0 +1,8 @@
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# In a real work the .env file should not be comented.
+# .env
