@@ -19,7 +19,7 @@ test.describe("Currencies Convertions", async () => {
     const currency = data.negativeAmount as CurrencyModel;
 
     await currencyPage.go();
-    await currencyPage.acceptCookies();
+    // await currencyPage.acceptCookies();
     await currencyPage.fillAmount(currency.amount);
     await currencyPage.validateAmount("Please enter an amount greater than 0");
     await currencyPage.validateDisabledButton("Convert");
@@ -34,7 +34,7 @@ test.describe("Currencies Convertions", async () => {
     const currency = data.invalidAmount as CurrencyModel;
 
     await currencyPage.go();
-    await currencyPage.acceptCookies();
+    // await currencyPage.acceptCookies();
     await currencyPage.fillAmount(currency.amount);
     await currencyPage.validateAmount("Please enter a valid amount");
     await currencyPage.validateDisabledButton("Convert");
@@ -49,7 +49,7 @@ test.describe("Currencies Convertions", async () => {
     const currency = data.EURtoGBP as CurrencyModel;
 
     await currencyPage.go();
-    await currencyPage.acceptCookies();
+    // await currencyPage.acceptCookies();
     await currencyPage.fillAmount(currency.amount);
     await currencyPage.fillFromCurrency(currency.from);
     await currencyPage.fillToCurrency(currency.to);
@@ -67,7 +67,7 @@ test.describe("Currencies Convertions", async () => {
     const currency = data.USDtoJPY as CurrencyModel;
 
     await currencyPage.go();
-    await currencyPage.acceptCookies();
+    // await currencyPage.acceptCookies();
     await currencyPage.fillAmount(currency.amount);
     await currencyPage.fillFromCurrency(currency.from);
     await currencyPage.fillToCurrency(currency.to);
@@ -85,7 +85,7 @@ test.describe("Currencies Convertions", async () => {
     const currency = data.AUDtoCAD as CurrencyModel;
 
     await currencyPage.go();
-    await currencyPage.acceptCookies();
+    // await currencyPage.acceptCookies();
     await currencyPage.fillAmount(currency.amount);
     await currencyPage.fillFromCurrency(currency.from);
     await currencyPage.fillToCurrency(currency.to);
@@ -103,7 +103,7 @@ test.describe("Currencies Convertions", async () => {
     const currency = data.CHFtoCNY as CurrencyModel;
 
     await currencyPage.go();
-    await currencyPage.acceptCookies();
+    // await currencyPage.acceptCookies();
     await currencyPage.fillAmount(currency.amount);
     await currencyPage.fillFromCurrency(currency.from);
     await currencyPage.fillToCurrency(currency.to);
