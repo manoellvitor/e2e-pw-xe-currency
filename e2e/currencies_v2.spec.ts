@@ -30,7 +30,7 @@ test.describe("Currencies Convertions", () => {
 
       // Given the user is on the currency converter page
       await currencyPage.go();
-      // await currencyPage.acceptCookies();
+      await currencyPage.acceptCookies();
       // When the user enters the amount to convert
       await currencyPage.fillAmount(currency.amount);
       // And the user selects the source currency and the target currency
