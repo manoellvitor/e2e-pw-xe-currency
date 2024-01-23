@@ -3,6 +3,6 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-
+/allure-results
 # In a real work the .env file should not be comented.
 # .env
