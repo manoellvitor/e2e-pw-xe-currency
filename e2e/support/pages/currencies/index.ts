@@ -1,7 +1,5 @@
 import { Locator, Page, expect } from "@playwright/test";
 
-import { CurrencyModel } from "../../../fixtures/currency.model";
-
 export class CurrencyPage {
   readonly page: Page;
   readonly fromInput: Locator;
