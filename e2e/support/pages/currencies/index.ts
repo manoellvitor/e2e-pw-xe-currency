@@ -61,4 +61,16 @@ export class CurrencyPage {
     });
     await expect(target).toBeDisabled();
   }
+
+  async validateConversionAmount(currencyToName: string) {
+    const regex = /^([\d,]+\.?\d+)\s(.+)$/;
+    const target = this.page.locator(`xpath=//p[text()=" ${currencyToName}"]`);
+    // Added this one to be sure it will loads the page correctly with the conversion values!
+    await expect(target).toBeVisible();
+    const values = await this.page
+      .locator(`xpath=//p[text()=" ${currencyToName}"]`)
+      .allInnerTexts();
+
+    await expect(String(values)).toMatch(regex);
+  }
 }

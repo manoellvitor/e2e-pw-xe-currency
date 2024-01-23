@@ -25,7 +25,7 @@ test.describe("Currencies Convertions", async () => {
     await currencyPage.validateDisabledButton("Convert");
   });
 
-  test.only("Do not accept invalid amounts", async () => {
+  test("Do not accept invalid amounts", async () => {
     // Scenario: Do not accept invalid amounts
     // Given the user is on the currency converter page
     // When the user enters the amount that is not a valid number i.e (-,.#[a-bA-B])
@@ -45,7 +45,7 @@ test.describe("Currencies Convertions", async () => {
     // When the user selects Euro as the source currency and Pounds as the target currency
     // And the user performs the currency conversion
     // Then the result on the proceeding page should be accurate
-    const currency = data.USDtoGBP as CurrencyModel;
+    const currency = data.EURtoGBP as CurrencyModel;
 
     await currencyPage.go();
     await currencyPage.acceptCookies();
@@ -53,5 +53,23 @@ test.describe("Currencies Convertions", async () => {
     await currencyPage.fillFromCurrency(currency.from);
     await currencyPage.fillToCurrency(currency.to);
     await currencyPage.currencyConvert();
+    await currencyPage.validateConversionAmount(currency.toName);
+  });
+
+  test("Verify USD to JPY conversion", async () => {
+    // Scenario: Verify USD to JPY conversion
+    // Given the user is on the currency converter page
+    // When the user selects US Dollar as the source currency and Japanese Yen as the target currency
+    // And the user performs the currency conversion
+    // Then the result on the proceeding page should be accurate
+    const currency = data.USDtoJPY as CurrencyModel;
+
+    await currencyPage.go();
+    await currencyPage.acceptCookies();
+    await currencyPage.fillAmount(currency.amount);
+    await currencyPage.fillFromCurrency(currency.from);
+    await currencyPage.fillToCurrency(currency.to);
+    await currencyPage.currencyConvert();
+    await currencyPage.validateConversionAmount(currency.toName);
   });
 });

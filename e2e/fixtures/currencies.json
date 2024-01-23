@@ -1,10 +1,17 @@
 {
-  "USDtoGBP": {
+  "EURtoGBP": {
     "fromName": "Euros",
     "from": "EUR",
     "toName": "British Pounds",
     "to": "GBP",
     "amount": "5"
+  },
+  "USDtoJPY": {
+    "fromName": "US Dollars",
+    "from": "EUR",
+    "toName": "Japanese Yen",
+    "to": "JPY",
+    "amount": "20"
   },
   "negativeAmount": {
     "fromName": "",
