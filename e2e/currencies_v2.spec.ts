@@ -10,10 +10,13 @@ test.beforeEach(({ page }) => {
   currencyPage = new CurrencyPage(page);
 });
 
-const conversions = parse(fs.readFileSync(path.join(__dirname, "input.csv")), {
-  columns: true,
-  skip_empty_lines: true,
-});
+const conversions = parse(
+  fs.readFileSync(path.join(`${__dirname}/fixtures/input.csv`)),
+  {
+    columns: true,
+    skip_empty_lines: true,
+  }
+);
 
 test.describe("Currencies Convertions", () => {
   for (const currency of conversions) {
