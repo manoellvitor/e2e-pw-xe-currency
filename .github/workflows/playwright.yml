@@ -20,7 +20,7 @@ jobs:
       - run: npm ci
       - run: npm install
       - run: npx playwright install
-      - run: npm tests
+      - run: npm run tests
 
       - uses: actions/upload-artifact@master
         with:
