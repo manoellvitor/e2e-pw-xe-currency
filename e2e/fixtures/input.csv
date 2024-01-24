@@ -1,6 +1,8 @@
-﻿fromName,from,toName,to,amount
-Euros,EUR,British Pounds,GBP,5
-US Dollars,USD,Japanese Yen,JPY,20
-Indian Rupees,INR,Singapore Dollars,SGD,200
-Swiss Francs,CHF,Chinese Yuan Renminbi,CNY,78
-Australian Dollars,AUD,Canadian Dollars,CAD,14
+﻿testCase,fromName,from,toName,to,amount,errorMessage
+Verify Currency conversion,Euros,EUR,British Pounds,GBP,5,
+Verify Currency conversion,US Dollars,USD,Japanese Yen,JPY,20,
+Verify Currency conversion,Indian Rupees,INR,Singapore Dollars,SGD,200,
+Verify Currency conversion,Swiss Francs,CHF,Chinese Yuan Renminbi,CNY,78,
+Verify Currency conversion,Australian Dollars,AUD,Canadian Dollars,CAD,14,
+Do not accept a conversion with zero amount,Iraqi Dinars,IQD,CFA Francs,XOF,0,Please enter an amount greater than 0
+Do not accept invalid amounts,Qatari Rials,QAR,Dominican Pesos,DOP,#a$,Please enter a valid amount

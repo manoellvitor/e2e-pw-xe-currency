@@ -47,8 +47,8 @@ export class CurrencyPage {
   }
 
   // Validations
-  async validateAmount(message: string) {
-    const errorMessage = this.page.getByText(message);
+  async validateAmount(message?: string) {
+    const errorMessage = this.page.getByText(message ?? "");
     await expect(errorMessage).toBeVisible();
   }
 
